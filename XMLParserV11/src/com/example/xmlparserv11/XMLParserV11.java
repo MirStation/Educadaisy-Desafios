@@ -8,19 +8,34 @@ import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
 
-import com.example.xmlparserv11.R;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.TextView;
 
 public class XMLParserV11 extends Activity {
 
-	private TextView display;
-	private ArrayList<String> paragraphsList = new ArrayList<String>();
+	private ArrayList<String> paragraphsList;
+	private String auxParagraphs;
+	private int numParagraphs;
+	
 	private int eventType;
-	private String auxParagraphs = "";
-	private int numParagraphs = 0;
+	
+	private TextView display;
+	
+	private MyScrollView mScrollView;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState){
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.display_paragraphs);
+		this.paragraphsList = new ArrayList<String>();
+		this.auxParagraphs = "";
+		this.numParagraphs = 0;
+		this.display = (TextView) findViewById(R.id.paragraphsTextView);
+		this.mScrollView = (MyScrollView) findViewById(R.id.scroll);
+		this.mScrollView.setMainActivity(this);
+		loadParagraphsBlock(30);
+	}
 	
 //	@Override
 //	protected void onCreate(Bundle savedInstanceState) {
@@ -92,17 +107,7 @@ public class XMLParserV11 extends Activity {
 //		}
 //	}
 	
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.display_paragraphs);
-		this.display = (TextView) findViewById(R.id.paragraphsTextView);
-		loadParagraphsBlock();
-		loadParagraphsBlock();
-		loadParagraphsBlock();
-	}
-	
-	public void loadParagraphsBlock() {
+	public void loadParagraphsBlock(int block_size) {
 		XmlPullParserFactory pullParserFactory;
 		try {
 			pullParserFactory = XmlPullParserFactory.newInstance();
@@ -113,19 +118,16 @@ public class XMLParserV11 extends Activity {
 			parser.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
 			parser.setInput(in_s, null);
 			eventType = parser.getEventType();
-			processXML(parser, 3);
-			//processXML(parser, 3);
+			processXML(parser, block_size);
 		} catch (XmlPullParserException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		displayParagraphBlock();
-		//displayParagraphBlock();
 	}
 	
-	public void processXML(XmlPullParser parser, int paragraphPackageSize) throws XmlPullParserException,
+	private void processXML(XmlPullParser parser, int paragraphPackageSize) throws XmlPullParserException,
 			IOException {
 		
 		boolean isP = false;
@@ -152,7 +154,6 @@ public class XMLParserV11 extends Activity {
 						if (numParagraphs <= paragraphPackageSize) {
 							auxParagraphs += text + "\n";
 						} else {
-							//System.out.println(auxParagraphs);
 							paragraphsList.add(auxParagraphs);
 							auxParagraphs = "<-->\n" + text + "\n";
 							numParagraphs = 1;
@@ -167,13 +168,7 @@ public class XMLParserV11 extends Activity {
 		}
 	}
 
-	// private void displayParagraphs() {
-	// TextView display = (TextView) findViewById(R.id.paragraphsTextView);
-	// display.setText(paragraphs);
-	// }
-
-	public void displayParagraphBlock() {
-		System.out.println("pls:" + paragraphsList.size());
+	private void displayParagraphBlock() {
 		if (paragraphsList.size() > 0) {
 			display.append(paragraphsList.remove(0));
 		}
