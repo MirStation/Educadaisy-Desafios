@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Visualizacao</string>
+    <string name="tamanho_fonte">Tamanho da fonte</string>
+    <string-array name="categoria_tamanho_fonte">
+	    <item>10</item>
+	    <item>20</item>
+	    <item>30</item>
+	    <item>40</item>
+	    <item>50</item>
+	</string-array>
+	<string name="cor_fonte">Cor da fonte</string>
+    <string-array name="categoria_cor_fonte">
+	    <item>vermelho</item>
+	    <item>verde</item>
+	    <item>azul</item>
+	    <item>preto</item>
+	    <item>branco</item>
+	</string-array>
+	<string name="cor_fundo">Cor do fundo</string>
+    <string-array name="categoria_cor_fundo">
+	    <item>vermelho</item>
+	    <item>verde</item>
+	    <item>azul</item>
+	    <item>preto</item>
+	    <item>branco</item>
+	</string-array>
+	<string name="exemplo">Exemplo</string>
+	<string name="exemplo_texto">Exemplo de texto.</string>
+	<string name="exemplo_texto_destacado">Exemplo de texto destacado.</string>
+</resources>

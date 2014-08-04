@@ -11,7 +11,6 @@ public class MyScrollView extends ScrollView {
 	
 	public MyScrollView(Context context) {
 		super(context);
-		// TODO Auto-generated constructor stub
 	}
 	
 	public MyScrollView(Context context, AttributeSet attrs,

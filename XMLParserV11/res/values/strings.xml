@@ -1,6 +1,5 @@
 <resources>
 
     <string name="app_name">XMLParserV11</string>
-    <string name="loading_screen">Loading &#8230;</string>
 
 </resources>

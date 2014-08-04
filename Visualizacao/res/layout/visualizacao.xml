@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/tamanho_fonte" 
+         android:textStyle="bold" />
+     <Spinner
+         android:id="@+id/tamanho_fonte"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:prompt="@string/tamanho_fonte" />
+     
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/cor_fonte" 
+         android:textStyle="bold" />
+     <Spinner
+         android:id="@+id/cor_fonte"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:prompt="@string/cor_fonte" />
+     
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/cor_fundo" 
+         android:textStyle="bold" />
+     <Spinner
+         android:id="@+id/cor_fundo"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:prompt="@string/cor_fundo" />
+     
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/exemplo" 
+         android:textStyle="bold" />
+     <ScrollView
+         android:id="@+id/exemplo"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="@color/vermelho" >
+         
+         <LinearLayout
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:orientation="horizontal" >
+     		<TextView
+        		android:id="@+id/exemplo_texto"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:text="@string/exemplo_texto" />
+     		<TextView
+        		android:id="@+id/exemplo_texto_destacado"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:text="@string/exemplo_texto_destacado" />
+     	</LinearLayout>
+     
+     </ScrollView>
+
+</LinearLayout>
