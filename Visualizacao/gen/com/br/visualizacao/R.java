@@ -10,27 +10,34 @@ package com.br.visualizacao;
 public final class R {
     public static final class array {
         public static final int categoria_cor_fonte=0x7f060001;
+        public static final int categoria_cor_fonte_destacado=0x7f060003;
         public static final int categoria_cor_fundo=0x7f060002;
+        public static final int categoria_cor_fundo_destacado=0x7f060004;
         public static final int categoria_tamanho_fonte=0x7f060000;
     }
     public static final class attr {
     }
     public static final class color {
+        public static final int amarelo=0x7f040005;
         public static final int azul=0x7f040002;
+        public static final int azulmarinho=0x7f040006;
         public static final int branco=0x7f040004;
+        public static final int cinzento=0x7f040008;
         public static final int preto=0x7f040003;
         public static final int verde=0x7f040001;
         public static final int vermelho=0x7f040000;
+        public static final int violeta=0x7f040007;
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
         public static final int cor_fonte=0x7f080001;
+        public static final int cor_fonte_destacado=0x7f080003;
         public static final int cor_fundo=0x7f080002;
-        public static final int exemplo=0x7f080003;
-        public static final int exemplo_texto=0x7f080004;
-        public static final int exemplo_texto_destacado=0x7f080005;
+        public static final int cor_fundo_destacado=0x7f080004;
+        public static final int exemplo=0x7f080005;
+        public static final int exemplo_texto=0x7f080006;
         public static final int tamanho_fonte=0x7f080000;
     }
     public static final class layout {
@@ -39,10 +46,11 @@ public final class R {
     public static final class string {
         public static final int app_name=0x7f050000;
         public static final int cor_fonte=0x7f050002;
+        public static final int cor_fonte_destacado=0x7f050004;
         public static final int cor_fundo=0x7f050003;
-        public static final int exemplo=0x7f050004;
-        public static final int exemplo_texto=0x7f050005;
-        public static final int exemplo_texto_destacado=0x7f050006;
+        public static final int cor_fundo_destacado=0x7f050005;
+        public static final int exemplo=0x7f050006;
+        public static final int exemplo_texto=0x7f050007;
         public static final int tamanho_fonte=0x7f050001;
     }
     public static final class style {

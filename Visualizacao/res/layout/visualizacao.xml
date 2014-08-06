@@ -40,6 +40,28 @@
      <TextView
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
+         android:text="@string/cor_fonte_destacado" 
+         android:textStyle="bold" />
+     <Spinner
+         android:id="@+id/cor_fonte_destacado"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:prompt="@string/cor_fonte_destacado" />
+     
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/cor_fundo_destacado" 
+         android:textStyle="bold" />
+     <Spinner
+         android:id="@+id/cor_fundo_destacado"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:prompt="@string/cor_fundo_destacado" />
+     
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
          android:text="@string/exemplo" 
          android:textStyle="bold" />
      <ScrollView
@@ -57,11 +79,6 @@
             	android:layout_width="wrap_content"
             	android:layout_height="wrap_content"
             	android:text="@string/exemplo_texto" />
-     		<TextView
-        		android:id="@+id/exemplo_texto_destacado"
-            	android:layout_width="wrap_content"
-            	android:layout_height="wrap_content"
-            	android:text="@string/exemplo_texto_destacado" />
      	</LinearLayout>
      
      </ScrollView>

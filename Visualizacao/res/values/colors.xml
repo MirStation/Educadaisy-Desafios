@@ -5,4 +5,8 @@
     <color name="azul">#0000FF</color>
     <color name="preto">#000000</color>
     <color name="branco">#FFFFFF</color>
+    <color name="amarelo">#FFFF00</color>
+    <color name="azulmarinho">#00FFFF</color>
+    <color name="violeta">#FF00FF</color>
+    <color name="cinzento">#C0C0C0</color>
 </resources>

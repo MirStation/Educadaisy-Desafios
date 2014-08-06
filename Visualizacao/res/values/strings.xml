@@ -10,10 +10,10 @@
 	</string-array>
 	<string name="cor_fonte">Cor da fonte</string>
     <string-array name="categoria_cor_fonte">
-	    <item>vermelho</item>
+	    <item>preto</item>
 	    <item>verde</item>
 	    <item>azul</item>
-	    <item>preto</item>
+	    <item>vermelho</item>
 	    <item>branco</item>
 	</string-array>
 	<string name="cor_fundo">Cor do fundo</string>
@@ -24,7 +24,20 @@
 	    <item>preto</item>
 	    <item>branco</item>
 	</string-array>
+	<string name="cor_fonte_destacado">Cor da fonte de destacado</string>
+	<string-array name="categoria_cor_fonte_destacado">
+	    <item>amarelo</item>
+	    <item>azul marinho</item>
+	    <item>violeta</item>
+	    <item>cinzento</item>
+	</string-array>
+	<string name="cor_fundo_destacado">Cor do fundo de destacado</string>
+	<string-array name="categoria_cor_fundo_destacado">
+	    <item>violeta</item>
+	    <item>amarelo</item>
+	    <item>azul marinho</item>
+	    <item>cinzento</item>
+	</string-array>
 	<string name="exemplo">Exemplo</string>
-	<string name="exemplo_texto">Exemplo de texto.</string>
-	<string name="exemplo_texto_destacado">Exemplo de texto destacado.</string>
+	<string name="exemplo_texto">Exemplo de texto. Exemplo de texto destacado.</string>
 </resources>
